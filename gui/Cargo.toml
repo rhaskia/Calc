@@ -8,3 +8,5 @@ eframe = "0.22.0"
 egui-plotter = "0.3.0"
 plotters = "0.3.6"
 math = { workspace = true }
+proc-macro2 = "=1.0.79"
+winapi = {version="0.3.9", features=["winuser"]}
