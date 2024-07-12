@@ -22,7 +22,6 @@ pub fn eval_expr(expr_ref: ExprRef, tree: &ExprTree, constants: &HashMap<char, f
     }
 }
 
-// This is getting ridiculous
 pub fn eval_range(formula: MathTopLevel, constants: &HashMap<char, f64>, range: VariableRange) -> Result<Vec<f64>, EvalError> {
     let values = range.collect();
     let mut results = Vec::new();
@@ -63,7 +62,7 @@ pub fn binop_to_fn(binop: BinOp) -> fn(f64, f64) -> f64 {
         BinOp::Sub => Sub::sub,
         BinOp::Div => Div::div,
         BinOp::Mul => Mul::mul,
-        BinOp::Pow => todo!(),
+        BinOp::Pow => f64::powf,
     }
 }
 
